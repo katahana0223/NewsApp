@@ -14,6 +14,12 @@
 		2B3DAC931EF92C5000360CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DAC911EF92C5000360CCC /* LaunchScreen.storyboard */; };
 		2B3DAC9E1EF92C5000360CCC /* NewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DAC9D1EF92C5000360CCC /* NewsAppTests.swift */; };
 		2B3DACA91EF92C5000360CCC /* NewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DACA81EF92C5000360CCC /* NewsAppUITests.swift */; };
+		2BC235371F025D8500ABCF64 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC235351F025D8500ABCF64 /* CustomTableViewCell.swift */; };
+		2BC235381F025D8500ABCF64 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC235361F025D8500ABCF64 /* CustomTableViewCell.xib */; };
+		2BC235451F026A7000ABCF64 /* cow01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BC235411F026A7000ABCF64 /* cow01.jpg */; };
+		2BC235461F026A7000ABCF64 /* jidori06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BC235421F026A7000ABCF64 /* jidori06.jpg */; };
+		2BC235471F026A7000ABCF64 /* s_0043.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BC235431F026A7000ABCF64 /* s_0043.jpg */; };
+		2BC235481F026A7000ABCF64 /* shutterstock_128724608-1-690x491.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BC235441F026A7000ABCF64 /* shutterstock_128724608-1-690x491.jpg */; };
 		B18F8DE2DBA556CCC51E2FF2 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6346547BB8997E6CDD64B0 /* Pods_NewsApp.framework */; };
 		B571E740C310EA8066D156B5 /* Pods_NewsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0050C25A7C0F2CB467DDC4 /* Pods_NewsAppUITests.framework */; };
 		CA06E677181041165444102E /* Pods_NewsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997FE010A48C0C35D83F9191 /* Pods_NewsAppTests.framework */; };
@@ -50,6 +56,12 @@
 		2B3DACA41EF92C5000360CCC /* NewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3DACA81EF92C5000360CCC /* NewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITests.swift; sourceTree = "<group>"; };
 		2B3DACAA1EF92C5000360CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC235351F025D8500ABCF64 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		2BC235361F025D8500ABCF64 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		2BC235411F026A7000ABCF64 /* cow01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cow01.jpg; sourceTree = "<group>"; };
+		2BC235421F026A7000ABCF64 /* jidori06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jidori06.jpg; sourceTree = "<group>"; };
+		2BC235431F026A7000ABCF64 /* s_0043.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = s_0043.jpg; sourceTree = "<group>"; };
+		2BC235441F026A7000ABCF64 /* shutterstock_128724608-1-690x491.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shutterstock_128724608-1-690x491.jpg"; sourceTree = "<group>"; };
 		35C4AEEC8987A26366018692 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6433840855C64A2F3DCB44DC /* Pods-NewsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppTests/Pods-NewsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		6D0050C25A7C0F2CB467DDC4 /* Pods_NewsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,9 +136,15 @@
 		2B3DAC871EF92C5000360CCC /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				2BC235411F026A7000ABCF64 /* cow01.jpg */,
+				2BC235421F026A7000ABCF64 /* jidori06.jpg */,
+				2BC235431F026A7000ABCF64 /* s_0043.jpg */,
+				2BC235441F026A7000ABCF64 /* shutterstock_128724608-1-690x491.jpg */,
 				2B3DAC881EF92C5000360CCC /* AppDelegate.swift */,
 				2B3DAC8A1EF92C5000360CCC /* ViewController.swift */,
 				2B3DAC8C1EF92C5000360CCC /* Main.storyboard */,
+				2BC235351F025D8500ABCF64 /* CustomTableViewCell.swift */,
+				2BC235361F025D8500ABCF64 /* CustomTableViewCell.xib */,
 				2B3DAC8F1EF92C5000360CCC /* Assets.xcassets */,
 				2B3DAC911EF92C5000360CCC /* LaunchScreen.storyboard */,
 				2B3DAC941EF92C5000360CCC /* Info.plist */,
@@ -282,8 +300,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC235471F026A7000ABCF64 /* s_0043.jpg in Resources */,
+				2BC235461F026A7000ABCF64 /* jidori06.jpg in Resources */,
 				2B3DAC931EF92C5000360CCC /* LaunchScreen.storyboard in Resources */,
+				2BC235481F026A7000ABCF64 /* shutterstock_128724608-1-690x491.jpg in Resources */,
 				2B3DAC901EF92C5000360CCC /* Assets.xcassets in Resources */,
+				2BC235451F026A7000ABCF64 /* cow01.jpg in Resources */,
+				2BC235381F025D8500ABCF64 /* CustomTableViewCell.xib in Resources */,
 				2B3DAC8E1EF92C5000360CCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC235371F025D8500ABCF64 /* CustomTableViewCell.swift in Sources */,
 				2B3DAC8B1EF92C5000360CCC /* ViewController.swift in Sources */,
 				2B3DAC891EF92C5000360CCC /* AppDelegate.swift in Sources */,
 			);
