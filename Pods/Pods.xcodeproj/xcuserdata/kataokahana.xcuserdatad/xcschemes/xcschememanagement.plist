@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-NewsApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2F0C0F810568D3E82219429D9D870F04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>42FE145432C6275E7BDF217A7577A414</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D678AFFF3D30822BF5EBC622079456C</key>
+		<key>45C259E5DC4A9BE2AD6E97098609C87C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8FA23554A26A34A2009182D1650A3A64</key>
+		<key>8A53ABB310EE171F78CE91C3ACF0FD8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -6,7 +6,7 @@ target 'NewsApp' do
   use_frameworks!
   pod 'Alamofire', '~>4.5.0'
   pod 'SwiftyJSON','~>3.1.4'
-
+  pod 'Kingfisher'
   # Pods for NewsApp
 
   target 'NewsAppTests' do

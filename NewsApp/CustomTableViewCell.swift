@@ -14,6 +14,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var myTitleLabel: UILabel!
     @IBOutlet var myDedcriptionLabel: UILabel!
     
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

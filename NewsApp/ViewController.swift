@@ -7,34 +7,26 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
+import Kingfisher
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet var table:UITableView!
-    let image1 = UIImage(named:"cow01.jpg")
-    let image2 = UIImage(named:"shutterstock_128724608-1-690x491.jpg")
-    let image3 = UIImage(named:"s_0043.jpg")
-    let image4 = UIImage(named:"jidori06.jpg")
+    @IBOutlet var table: UITableView!
+    var articleArray :[Article] = []
     
-    let imageNames = ["shutterstock_128724608-1-690x491.jpg","cow01.jpg","s_0043.jpg","jidori06.jpg"]
     
-    let imageTitles = ["牛","牛肉","鶏","鶏肉"]
-    let imageDecriptions: [String] = [
-        "見てくる牛",
-        "牛の肉",
-        "横向きの鶏",
-        "鶏の肉"
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         table.dataSource = self
         table.delegate = self
+        
         self.table.register(UINib(nibName: "CustomTableViewCell",bundle: nil), forCellReuseIdentifier: "customCell")
         
-        
+        fetch()
         
     }
     
@@ -45,7 +37,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return imageNames.count
+        
+        return articleArray.count
     }
     
     
@@ -54,15 +47,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell",for: indexPath) as! CustomTableViewCell
         
-        cell.myImageview.image = UIImage(named: imageNames[indexPath.row])
-        cell.myTitleLabel.text = imageTitles[indexPath.row]
-        cell.myDedcriptionLabel.text = imageDecriptions[indexPath.row]
+        
+        let url = URL(string:articleArray[indexPath.row].urlToImage )
+        cell.myImageview.kf.setImage(with: url)
+        cell.myTitleLabel.text = articleArray[indexPath.row].title
+        cell.myDedcriptionLabel.text = articleArray[indexPath.row].descriptionText
         
         return cell
     }
     
-    
+    func fetch () {
+        
+        Alamofire.request("https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6b15ddbe776b44e791f2bfea3e1a18c9").responseJSON { response in
+            
+            let data = JSON(response.data)
+            for i in data ["articles"].arrayValue{
+                let article = Article(json : i)
+                self.articleArray.append(article)
+                
+                
+            }
+        self.table.reloadData()
+            
+        }
+    }
 }
-
 
 
