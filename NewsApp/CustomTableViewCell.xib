@@ -1,54 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="NewsApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="126" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="NKh-UH-66X">
-                        <rect key="frame" x="8" y="2" width="40" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zmk-LS-W8v">
-                        <rect key="frame" x="56" y="12" width="125" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7G-LT-KXY">
+                        <rect key="frame" x="14" y="49" width="287" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FIu-MH-Dcz">
-                        <rect key="frame" x="189" y="12" width="123" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S3y-Pd-TS0">
+                        <rect key="frame" x="14" y="8" width="37" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="NXl-e4-ts5"/>
+                            <constraint firstAttribute="width" constant="37" id="Xoa-O2-UGX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K0-NP-Wfe">
+                        <rect key="frame" x="57" y="17" width="244" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="244" id="JVA-gB-ufG"/>
+                            <constraint firstAttribute="width" constant="244" id="QwC-e3-FX7"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="q7G-LT-KXY" secondAttribute="trailing" constant="11" id="Bs7-Vi-oto"/>
+                    <constraint firstItem="S3y-Pd-TS0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="KCx-z4-KZM"/>
+                    <constraint firstItem="q7G-LT-KXY" firstAttribute="top" secondItem="S3y-Pd-TS0" secondAttribute="bottom" constant="3" id="L76-h2-iBu"/>
+                    <constraint firstItem="4K0-NP-Wfe" firstAttribute="leading" secondItem="S3y-Pd-TS0" secondAttribute="trailing" constant="6" id="NQe-gS-1Ch"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="q7G-LT-KXY" secondAttribute="bottom" constant="49" id="Qhj-XN-H2p"/>
+                    <constraint firstItem="S3y-Pd-TS0" firstAttribute="leading" secondItem="q7G-LT-KXY" secondAttribute="leading" id="bk5-gh-Yto"/>
+                    <constraint firstItem="q7G-LT-KXY" firstAttribute="top" secondItem="S3y-Pd-TS0" secondAttribute="bottom" constant="3" id="nsW-Md-Mfk"/>
+                    <constraint firstItem="S3y-Pd-TS0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="rli-ne-WH3"/>
+                    <constraint firstItem="S3y-Pd-TS0" firstAttribute="centerY" secondItem="4K0-NP-Wfe" secondAttribute="centerY" id="vHL-RC-Iec"/>
+                    <constraint firstItem="q7G-LT-KXY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="wM3-0T-lOg"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="myDedcriptionLabel" destination="FIu-MH-Dcz" id="aAd-FL-0XG"/>
-                <outlet property="myImageview" destination="NKh-UH-66X" id="TIX-5V-nFt"/>
-                <outlet property="myTitleLabel" destination="Zmk-LS-W8v" id="sfL-is-Bqo"/>
+                <outlet property="myDedcriptionLabel" destination="q7G-LT-KXY" id="uDk-r2-Rei"/>
+                <outlet property="myImageview" destination="S3y-Pd-TS0" id="jnJ-ZW-k1P"/>
+                <outlet property="myTitleLabel" destination="4K0-NP-Wfe" id="AO7-8M-cdS"/>
             </connections>
-            <point key="canvasLocation" x="34" y="54"/>
+            <point key="canvasLocation" x="9" y="64"/>
         </tableViewCell>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

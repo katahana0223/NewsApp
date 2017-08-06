@@ -16,14 +16,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var table: UITableView!
     var articleArray :[Article] = []
     
-    
+    var selectedRow :Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         table.dataSource = self
         table.delegate = self
-        
+        table.estimatedRowHeight = 50
+        table.rowHeight = UITableViewAutomaticDimension
         self.table.register(UINib(nibName: "CustomTableViewCell",bundle: nil), forCellReuseIdentifier: "customCell")
         
         fetch()
@@ -47,6 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell",for: indexPath) as! CustomTableViewCell
         
+    
         
         let url = URL(string:articleArray[indexPath.row].urlToImage )
         cell.myImageview.kf.setImage(with: url)
@@ -56,21 +58,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    func fetch () {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        Alamofire.request("https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6b15ddbe776b44e791f2bfea3e1a18c9").responseJSON { response in
+        selectedRow = indexPath.row
+        
+        performSegue(withIdentifier: "toNextViewController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toNextViewController"){
+            let NextVC: NextViewController = (segue.destination as? NextViewController)!
             
-            let data = JSON(response.data)
-            for i in data ["articles"].arrayValue{
-                let article = Article(json : i)
-                self.articleArray.append(article)
+            NextVC.article = articleArray[selectedRow]
+        }
+        
+    }
+        func fetch () {
+            
+            Alamofire.request("https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6b15ddbe776b44e791f2bfea3e1a18c9").responseJSON { response in
                 
+                let data = JSON(response.data)
+                for i in data ["articles"].arrayValue{
+                    let article = Article(json : i)
+                    self.articleArray.append(article)
+                    
+                    
+                    
+                }
+                
+                
+                self.table.reloadData()
                 
             }
-        self.table.reloadData()
-            
         }
     }
-}
-
-
